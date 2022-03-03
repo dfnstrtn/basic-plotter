@@ -1,5 +1,5 @@
 [package]
-name = "aco"
+name = "plotter"
 version = "0.1.0"
 edition = "2018"
 
@@ -10,6 +10,9 @@ ttf-parser="0.9.0"
 image="*"
 rusttype="*"
 rand ="*"
+serde ={version = "1.0", features=["derive"]}
+serde_json = "1.0"
+json = "*"
 
 [dependencies.sdl2]
 version = "0.34"
