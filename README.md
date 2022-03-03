@@ -13,7 +13,7 @@ The schema is as follows
        "color":[u8COLOR_R,u8COLOR_G,u8COLOR_B],
        "points":[YOURPOINT_X,YOURPOINT_Y]
  }
-
+```
 `name` specifies the name of the plot you are plotting at the moment, so that the plotter can determine which plot it's plotting.
 
 `color` refers to the color of the plot. If the first point in a plot named 'NAME' had a color `[R,G,B]` that color will be the color of all subsequent points with name 'NAME'. Even of you change the color parameter in the json file you send.
