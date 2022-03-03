@@ -72,3 +72,11 @@ to know more, go to
 https://github.com/Rust-SDL2/rust-sdl2
 
 I shall statically link it in another release.
+
+## usage examples
+The keybindings are as follows
+```
+W A S D for movement
+Z X for zoom in/out
+```
+For a really basic plotter , these are all the controls you need. If you can think of something to add , that does not affect this tool's simplicity/transparency, submit a PR.
