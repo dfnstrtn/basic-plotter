@@ -55,8 +55,8 @@ fn main(){
 
     while(running){
         
-        let p_data = rx.try_recv();
-        if let Ok(z) = p_data{
+        //let p_data = rx.try_recv();
+        while let Ok(z) = rx.try_recv(){
             let name =  z.name;
             match plotting_keys.get_mut(&name){
                 Some(v) => {
@@ -68,9 +68,10 @@ fn main(){
                 }
             };
         }
-
-
-        for event in events.poll_iter(){
+        //events.pump_events();
+        //let event = events.wait_event_timeout(500).unwrap_or_else(||Event::Unknown{timestamp:0,type_:0});
+        let event = events.wait_event();
+        {
             match event{
                 //Event::Quit{..}|Event::KeyDown{keycode:Some{KeyCode::Escape}}
                 Event::Quit{..}|Event::KeyDown{keycode : Some(Keycode::Escape),..}=>{running=false},
